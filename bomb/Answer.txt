@@ -1,0 +1,82 @@
+Bomb lab answer: 
+phase_1: 
+Border relations with Canada have never been better.
+phase_2: 
+1 2 4 8 16 32 
+phase_3: 
+One possible answer: 
+7 327
+phase_4: 
+One possible answer: 
+7 0
+
+<=14 %d
+rdx = 14
+rsi = 0
+rdi = 14
+
+rax = 14
+rax = 14
+rcx = 14
+rcx = 0
+rax = 7
+rcx = 7
+
+rax = 0
+rsi = 8
+rdi = 14
+rdx = 14
+
+// disassembly of func4 
+// edi <= 14, esi = 0, edx = 14
+int func4(int edi, int esi, int edx) {
+	int eax = edx - esi; // 14
+	int ecx = eax >> 31; // 0
+	eax = (eax + ecx) / 2; // 7
+	ecx = eax + esi; // 7
+	if (ecx <= edi) {
+		eax = 0;
+		if (ecx >= edi) {
+			// ecx == edi 
+			return eax;
+		}
+		esi = ecx + 1;
+		eax = func4(edi, esi, edx);
+		eax = eax * 2 + 1;
+		return eax
+	}
+	edx = ecx - 1;
+	eax = func4(edi, esi, edx);
+	eax = eax * 2;
+	return eax;
+}
+
+phase_5: 
+One possible answer: 
+9?>567
+
+6x...
+ecx = *(ebx + rax)
+edx = ecx & 0xf
+edx = *(rdx + 0x4024b0)
+*(rsp + rax + 16) = edx & 0xff
+++eax
+eax < 6...
+0x4024b0: 
+    maduiersnfotvbylSo you think you can stop the bomb with ctrl-c, do you?
+
+*(rsp + 22) = 0
+0x40245e: 
+    flyers 
+
+We need characters that have the following numbers as their lower byte: 
+9, 15, 14, 5, 6, 7 
+
+9, ?, >, 5, 6, 7 
+
+
+phase_6: 
+4 3 2 1 6 5 
+
+find the order of the nodes. 
+Note that the orders are 7-x...
